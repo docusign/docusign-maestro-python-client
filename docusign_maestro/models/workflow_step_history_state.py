@@ -31,6 +31,7 @@ class WorkflowStepHistoryState(object):
     IN_PROGRESS = "In Progress"
     COMPLETED = "Completed"
     FAILED = "Failed"
+    CANCELED = "Canceled"
 
     """
     Attributes:

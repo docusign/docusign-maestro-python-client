@@ -33,15 +33,9 @@ class DSWorkflowVariableFromParticipant(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'key': 'ParticipantKeys',
-        'participant_id': 'str',
-        'source': 'DSWorkflowVariableSourceTypesParticipant'
     }
 
     attribute_map = {
-        'key': 'key',
-        'participant_id': 'participantId',
-        'source': 'source'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -49,84 +43,7 @@ class DSWorkflowVariableFromParticipant(object):
         if _configuration is None:
             _configuration = Configuration()
         self._configuration = _configuration
-
-        self._key = None
-        self._participant_id = None
-        self._source = None
         self.discriminator = None
-
-        setattr(self, "_{}".format('key'), kwargs.get('key', None))
-        setattr(self, "_{}".format('participant_id'), kwargs.get('participant_id', None))
-        setattr(self, "_{}".format('source'), kwargs.get('source', None))
-
-    @property
-    def key(self):
-        """Gets the key of this DSWorkflowVariableFromParticipant.  # noqa: E501
-
-
-        :return: The key of this DSWorkflowVariableFromParticipant.  # noqa: E501
-        :rtype: ParticipantKeys
-        """
-        return self._key
-
-    @key.setter
-    def key(self, key):
-        """Sets the key of this DSWorkflowVariableFromParticipant.
-
-
-        :param key: The key of this DSWorkflowVariableFromParticipant.  # noqa: E501
-        :type: ParticipantKeys
-        """
-        if self._configuration.client_side_validation and key is None:
-            raise ValueError("Invalid value for `key`, must not be `None`")  # noqa: E501
-
-        self._key = key
-
-    @property
-    def participant_id(self):
-        """Gets the participant_id of this DSWorkflowVariableFromParticipant.  # noqa: E501
-
-
-        :return: The participant_id of this DSWorkflowVariableFromParticipant.  # noqa: E501
-        :rtype: str
-        """
-        return self._participant_id
-
-    @participant_id.setter
-    def participant_id(self, participant_id):
-        """Sets the participant_id of this DSWorkflowVariableFromParticipant.
-
-
-        :param participant_id: The participant_id of this DSWorkflowVariableFromParticipant.  # noqa: E501
-        :type: str
-        """
-        if self._configuration.client_side_validation and participant_id is None:
-            raise ValueError("Invalid value for `participant_id`, must not be `None`")  # noqa: E501
-
-        self._participant_id = participant_id
-
-    @property
-    def source(self):
-        """Gets the source of this DSWorkflowVariableFromParticipant.  # noqa: E501
-
-
-        :return: The source of this DSWorkflowVariableFromParticipant.  # noqa: E501
-        :rtype: DSWorkflowVariableSourceTypesParticipant
-        """
-        return self._source
-
-    @source.setter
-    def source(self, source):
-        """Sets the source of this DSWorkflowVariableFromParticipant.
-
-
-        :param source: The source of this DSWorkflowVariableFromParticipant.  # noqa: E501
-        :type: DSWorkflowVariableSourceTypesParticipant
-        """
-        if self._configuration.client_side_validation and source is None:
-            raise ValueError("Invalid value for `source`, must not be `None`")  # noqa: E501
-
-        self._source = source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

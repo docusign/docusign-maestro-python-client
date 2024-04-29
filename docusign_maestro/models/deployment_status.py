@@ -34,6 +34,8 @@ class DeploymentStatus(object):
     DELETE_IN_PROGRESS = "Delete in Progress"
     DELETED = "Deleted"
     NOT_DEPLOYED = "Not Deployed"
+    UNPUBLISH_IN_PROGRESS = "Unpublish in Progress"
+    UNPUBLISHED = "Unpublished"
 
     """
     Attributes:
