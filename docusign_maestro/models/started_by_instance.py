@@ -121,7 +121,7 @@ class StartedByInstance(object):
         :param started_by_type: The started_by_type of this StartedByInstance.  # noqa: E501
         :type: str
         """
-        allowed_values = ["Anonymous", "Preparer", "Participant"]  # noqa: E501
+        allowed_values = ["Anonymous", "Preparer", "Participant", "OnBehalfOf"]  # noqa: E501
         if (self._configuration.client_side_validation and
                 started_by_type not in allowed_values):
             raise ValueError(

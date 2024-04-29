@@ -319,6 +319,7 @@ class WorkflowInstance(object):
     def users(self):
         """Gets the users of this WorkflowInstance.  # noqa: E501
 
+        Contains the list of Users and Steps mapping  # noqa: E501
 
         :return: The users of this WorkflowInstance.  # noqa: E501
         :rtype: dict(str, str)
@@ -329,6 +330,7 @@ class WorkflowInstance(object):
     def users(self, users):
         """Sets the users of this WorkflowInstance.
 
+        Contains the list of Users and Steps mapping  # noqa: E501
 
         :param users: The users of this WorkflowInstance.  # noqa: E501
         :type: dict(str, str)

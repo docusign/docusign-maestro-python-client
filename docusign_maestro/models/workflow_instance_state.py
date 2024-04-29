@@ -28,9 +28,11 @@ class WorkflowInstanceState(object):
     """
     allowed enum values
     """
+    CREATED = "Created"
     IN_PROGRESS = "In Progress"
     COMPLETED = "Completed"
     FAILED = "Failed"
+    CANCELED = "Canceled"
 
     """
     Attributes:
