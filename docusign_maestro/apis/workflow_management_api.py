@@ -113,7 +113,7 @@ class WorkflowManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -227,7 +227,7 @@ class WorkflowManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -343,7 +343,7 @@ class WorkflowManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -459,7 +459,7 @@ class WorkflowManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}/configInstances'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}/config_instances'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -570,7 +570,7 @@ class WorkflowManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -689,7 +689,7 @@ class WorkflowManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}/publish'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}/publish'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -810,7 +810,7 @@ class WorkflowManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']

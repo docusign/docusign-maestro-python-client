@@ -50,7 +50,7 @@ class Configuration(object):
             return
 
         # Default Base url
-        self.host = "https://www.docusign.net"
+        self.host = "https://apps.docusign.com/api/maestro"
         
         # Default api client
         self.api_client = None
@@ -119,9 +119,9 @@ class Configuration(object):
         python_version = platform.python_version()
 
         if six.PY3:
-            self.user_agent = "Swagger-Codegen/1.0.0/1.0.0/python3/" + f"{python_version}"
+            self.user_agent = "Swagger-Codegen/1.0.0/2.0.0rc1/python3/" + f"{python_version}"
         else:
-            self.user_agent = "Swagger-Codegen/1.0.0/1.0.0/python2/" + f"{python_version}"
+            self.user_agent = "Swagger-Codegen/1.0.0/2.0.0rc1/python2/" + f"{python_version}"
 
 
     @classmethod
@@ -277,5 +277,5 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1.0.0\n"\
-               "SDK Package Version: 1.0.0".\
+               "SDK Package Version: 2.0.0rc1".\
                format(env=sys.platform, pyversion=sys.version)
