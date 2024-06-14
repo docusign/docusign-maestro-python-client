@@ -113,7 +113,7 @@ class WorkflowInstanceManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/instances/{instanceId}/cancel'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/instances/{instanceId}/cancel'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -227,7 +227,7 @@ class WorkflowInstanceManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/instances/{instanceId}/history'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/instances/{instanceId}/history'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -346,7 +346,7 @@ class WorkflowInstanceManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}/instances/{instanceId}'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}/instances/{instanceId}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
@@ -462,7 +462,7 @@ class WorkflowInstanceManagementApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}/instances'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}/instances'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']

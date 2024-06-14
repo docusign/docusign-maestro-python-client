@@ -40,7 +40,7 @@ class WorkflowTriggerApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def trigger_workflow(self, account_id, body, **kwargs):
+    def trigger_workflow(self, account_id, workflow_definition_id, body, **kwargs):
         """
         Creates a new workflow instance after authenticating with DS Account Server
         Creates a new workflow instance after authenticating with DS Account Server
@@ -50,11 +50,12 @@ class WorkflowTriggerApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.trigger_workflow(account_id, body, callback=callback_function)
+        >>> thread = api.trigger_workflow(account_id, workflow_definition_id, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: Account ID (required)
+        :param str workflow_definition_id: Workflow Definition ID (required)
         :param str mtid: Managed Token Id registered with DS Account Server
         :param str mtsec: Managed Token Secret registered with DS Account Server
         :param TriggerPayload body: JSON payload that will be passed to the triggered workflow (required)
@@ -64,12 +65,12 @@ class WorkflowTriggerApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.trigger_workflow_with_http_info(account_id, body, **kwargs)
+            return self.trigger_workflow_with_http_info(account_id, workflow_definition_id, body, **kwargs)
         else:
-            (data) = self.trigger_workflow_with_http_info(account_id, body, **kwargs)
+            (data) = self.trigger_workflow_with_http_info(account_id, workflow_definition_id, body, **kwargs)
             return data
 
-    def trigger_workflow_with_http_info(self, account_id, body, **kwargs):
+    def trigger_workflow_with_http_info(self, account_id, workflow_definition_id, body, **kwargs):
         """
         Creates a new workflow instance after authenticating with DS Account Server
         Creates a new workflow instance after authenticating with DS Account Server
@@ -79,11 +80,12 @@ class WorkflowTriggerApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.trigger_workflow_with_http_info(account_id, body, callback=callback_function)
+        >>> thread = api.trigger_workflow_with_http_info(account_id, workflow_definition_id, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: Account ID (required)
+        :param str workflow_definition_id: Workflow Definition ID (required)
         :param str mtid: Managed Token Id registered with DS Account Server
         :param str mtsec: Managed Token Secret registered with DS Account Server
         :param TriggerPayload body: JSON payload that will be passed to the triggered workflow (required)
@@ -92,7 +94,7 @@ class WorkflowTriggerApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'mtid', 'mtsec', 'body']
+        all_params = ['account_id', 'workflow_definition_id', 'mtid', 'mtsec', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -110,6 +112,9 @@ class WorkflowTriggerApi(object):
         # verify the required parameter 'account_id' is set
         if ('account_id' not in params) or (params['account_id'] is None):
             raise ValueError("Missing the required parameter `account_id` when calling `trigger_workflow`")
+        # verify the required parameter 'workflow_definition_id' is set
+        if ('workflow_definition_id' not in params) or (params['workflow_definition_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_definition_id` when calling `trigger_workflow`")
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `trigger_workflow`")
@@ -117,10 +122,12 @@ class WorkflowTriggerApi(object):
 
         collection_formats = {}
 
-        resource_path = 'aow-auth/v1.0/accounts/{accountId}/workflows/trigger'.replace('{format}', 'json')
+        resource_path = '/v1/accounts/{accountId}/workflow_definitions/{workflowDefinitionId}/trigger'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['accountId'] = params['account_id']
+        if 'workflow_definition_id' in params:
+            path_params['workflowDefinitionId'] = params['workflow_definition_id']
 
         query_params = {}
         if 'mtid' in params:
