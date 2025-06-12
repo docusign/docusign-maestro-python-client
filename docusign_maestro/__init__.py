@@ -146,6 +146,12 @@ from docusign_maestro.models.workflow_step_error_error import WorkflowStepErrorE
 from docusign_maestro.models.workflow_step_history import WorkflowStepHistory
 from docusign_maestro.models.workflow_step_history_list import WorkflowStepHistoryList
 from docusign_maestro.models.workflow_step_history_state import WorkflowStepHistoryState
+import warnings
 
+warnings.warn(
+    "⚠️ Deprecated – Maestro is now available as part of the new IAM SDK: https://developers.docusign.com/docs/sdks/",
+    DeprecationWarning,
+    stacklevel=2
+)
 
 configuration = Configuration()
