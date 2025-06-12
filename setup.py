@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages, Command, os  # noqa: H301	
 
 NAME = "docusign-maestro"
-VERSION = "2.0.0"
+VERSION = "3.0.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -42,7 +42,7 @@ with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name=NAME,
     version=VERSION,
-    description="Maestro API",
+    description='⚠️ Deprecated – Maestro is now available as part of the new IAM SDK: https://developers.docusign.com/docs/sdks/',
     author_email="devcenter@docusign.com",
     url="",
     keywords=["Swagger", "Maestro API"],
